@@ -1,0 +1,57 @@
+#certification {
+  background-color: #005e94;
+  background-image: url("../images/certif-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 20px;
+  position: relative;
+
+  .heading {
+    margin-bottom: 60px;
+    * {
+      color: #fff;
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+  .owl-carousel{
+      padding: 40px 100px;
+      .owl-prev, .owl-next{
+        position: absolute;
+        top: 100px;
+        &::after{
+            content: '';
+            display: inline-block;
+            height: 48px;
+            width: 48px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        span{
+            display: none;
+        }
+      }
+      .owl-prev{
+        left: 10px;
+        &::after{
+            background-image: url('../images/left-arr.svg');
+        }
+      }
+      .owl-next{
+        right: 10px;
+        &::after{
+            background-image: url('../images/right-arr.svg');
+        }
+      }
+  }
+  @media screen and (max-width: 1100px) {
+      padding: 60px 10px 10px;
+      .heading{
+          margin-bottom: 20px;
+      }
+      .owl-carousel .owl-prev, .owl-carousel .owl-next{
+          top: 45px;
+      }
+  }
+}

@@ -1,0 +1,69 @@
+#shipping {
+  
+  background-image: url(../images/shipping-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 75px 0;
+  .heading {
+    * {
+      color: #fff;
+    }
+  }
+  .shipping-items {
+    display: flex;
+   
+    .item {
+      margin-right: 20px;
+      position: relative;
+      &:not(:last-child):after {
+        content: "";
+        display: inline-block;
+        width: 40%;
+        height: 1px;
+        border-top: 3px dashed #f5f9fb;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+      }
+      .img-box {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 40px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h4 {
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 30px;
+        color: #f5f9fb;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: #f5f9fb;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      .item::after{
+        display: none!important;
+      }
+      .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
