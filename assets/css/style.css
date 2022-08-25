@@ -478,6 +478,8 @@ header .menu-bar nav .toggle-btn.collapsed span {
   border-radius: 12px;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  height: 380px;
+  overflow: hidden;
 }
 
 #cards .card-item.card1 {
